@@ -1,0 +1,36 @@
+{
+    "name": "Extended strava stats",
+    "description": "satistics",
+    "version": "2.0",
+    "manifest_version": 3,
+    "permissions": [
+        "storage",
+        "activeTab",
+        "scripting",
+        "tabs"
+    ],
+    "icons": {
+        "16": "icons/icon16.png",
+        "32": "icons/icon32.png",
+        "48": "icons/icon48.png",
+        "128": "icons/icon128.png"
+    },
+    "content_scripts": [
+        {
+            "matches": [
+                "https://strava.com/*",
+                "https://www.strava.com/*"
+            ],
+            "js": [
+                "thirdParty/jquery-3.7.1.min.js",
+                "thirdParty/datatables.min.js",
+                "content.js"
+            ],
+            "css": [
+                "thirdParty/datatables.min.css",
+                "content.css"
+            ],
+            "run_at": "document_end"
+        }
+    ]
+}
