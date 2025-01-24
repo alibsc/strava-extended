@@ -38,3 +38,7 @@ small.red {
     padding-left: 16px;
     margin-top: -10px;
 }
+
+.section.p0 {
+    padding: 0px 0px;
+}
